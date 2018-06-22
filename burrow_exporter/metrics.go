@@ -22,14 +22,14 @@ var (
 			Name: "kafka_burrow_partition_current_offset",
 			Help: "The latest offset commit on a partition as reported by burrow.",
 		},
-		[]string{"cluster", "group", "topic", "partition"},
+		[]string{"cluster", "group", "topic", "partition", "status"},
 	)
 	KafkaConsumerPartitionMaxOffset = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
 			Name: "kafka_burrow_partition_max_offset",
 			Help: "The log end offset on a partition as reported by burrow.",
 		},
-		[]string{"cluster", "group", "topic", "partition"},
+		[]string{"cluster", "group", "topic", "partition", "status"},
 	)
 	KafkaConsumerTotalLag = prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
