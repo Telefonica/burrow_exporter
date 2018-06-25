@@ -75,6 +75,7 @@ type Partition struct {
 	Status    string `json:"status"`
 	Start     Offset `json:"start"`
 	End       Offset `json:"end"`
+	Lag       int64  `json:"current_lag"`
 }
 
 type ConsumerGroupStatusResp struct {
