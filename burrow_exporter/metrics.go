@@ -50,7 +50,7 @@ var (
 			Name: "kafka_burrow_partition_status",
 			Help: "The latest status on a topic's partition delivered in label as reported by burrow.",
 		},
-		[]string{"cluster", "topic", "partition", "status"},
+		[]string{"cluster", "group", "topic", "partition", "status"},
 	)
 )
 
@@ -61,4 +61,5 @@ func init() {
 	prometheus.MustRegister(KafkaConsumerPartitionMaxOffset)
 	prometheus.MustRegister(KafkaConsumerTotalLag)
 	prometheus.MustRegister(KafkaTopicPartitionOffset)
+	prometheus.MustRegister(KafkaConsumerPartitionStatus)
 }
